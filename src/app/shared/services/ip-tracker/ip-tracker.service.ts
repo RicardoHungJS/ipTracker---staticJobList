@@ -41,9 +41,7 @@ export class IpTrackerService {
         break;
     }
 
-    const response = this.http
-      .get<IPTrackingData>(url)
-      .pipe(map((res: any) => res));
+    const response = this.http.get<IPTrackingData>(url);
 
     return response;
   }
