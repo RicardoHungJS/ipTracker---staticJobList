@@ -1,0 +1,35 @@
+.page-not-found {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f5b0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 1100px) {
+    &__message {
+      font-size: 4rem !important;
+    }
+  }
+
+  &__box {
+    width: 50%;
+    height: 50%;
+    min-width: 300px;
+    padding: 30px;
+    background-color: rgb(70, 32, 209);
+    border-radius: 20px;
+    box-shadow: 0px 15px 30px -10px #545454bf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  &__message {
+    font-size: 6rem;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+  }
+}

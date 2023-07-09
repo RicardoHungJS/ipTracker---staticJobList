@@ -1,0 +1,16 @@
+<div class="ip-tracker-container">
+  <header class="ip-tracker-container__header">
+    <h1 class="ip-tracker-container__title">IP Address Tracker</h1>
+    <form class="ip-tracker-container__searcher-box" [formGroup]="ipForm" (ngSubmit)="onSubmit()">
+      <input class="ip-tracker-container__input-search" type="text" placeholder="Search for any IP address or domain"
+        formControlName="formIpAddress">
+      <button class="ip-tracker-container__input-button">
+        <img class="ip-tracker-container__button-icon" src="../../../assets/vsg/icon-arrow.svg">
+      </button>
+    </form>
+    <app-data-bar *ngIf="dataBarInfo" [dataBar]="dataBarInfo"></app-data-bar>
+  </header>
+  <div class="ip-tracker-container__mapbox">
+    <app-map-component *ngIf="coords" [coordsData]="coords"></app-map-component>
+  </div>
+</div>

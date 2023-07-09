@@ -1,0 +1,75 @@
+$header-height: 20rem;
+
+.ip-tracker-container {
+  width: 100vw;
+  height: 100vh;
+
+  .ip-tracker-container__header {
+    position: relative;
+    width: 100%;
+    height: $header-height;
+    padding: 2rem 2rem 6rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../assets/images/pattern-bg.png');
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .ip-tracker-container__title {
+      font-size: 2rem;
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      color: #fff;
+    }
+
+    .ip-tracker-container__searcher-box {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .ip-tracker-container__input-search {
+        width: 25rem;
+        height: 3.5rem;
+        border: none;
+        border-radius: 10px 0 0 10px;
+        padding: 0 20px;
+        outline: none;
+      }
+
+      .ip-tracker-container__input-button {
+        cursor: pointer;
+        height: 3.5rem;
+        width: 4rem;
+        border: none;
+        border-radius: 0 10px 10px 0;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+
+        &:hover {
+          .ip-tracker-container__button-icon {
+            width: 1.1rem;
+          }
+        }
+
+        .ip-tracker-container__button-icon {
+          transition: all 0.3s ease;
+          width: 0.8rem;
+
+        }
+      }
+    }
+  }
+
+  .ip-tracker-container__mapbox {
+    width: 100%;
+    height: calc(100% - $header-height);
+  }
+}

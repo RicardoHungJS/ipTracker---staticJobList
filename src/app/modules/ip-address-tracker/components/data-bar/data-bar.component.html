@@ -1,0 +1,18 @@
+<div class="data-bar">
+  <div class="data-bar__section">
+    <p class="data-bar__section-title">Ip address</p>
+    <p class="data-bar__data">{{dataBar?.ip}}</p>
+  </div>
+  <div class="data-bar__section">
+    <p class="data-bar__section-title">Location</p>
+    <p class="data-bar__data">{{dataBar?.region}}, {{dataBar?.city}} <br> {{dataBar?.postalCode}}</p>
+  </div>
+  <div class="data-bar__section">
+    <p class="data-bar__section-title">TimeZone</p>
+    <p class="data-bar__data">{{utcFormat}}</p>
+  </div>
+  <div class="data-bar__section">
+    <p class="data-bar__section-title">Isp</p>
+    <p class="data-bar__data">{{dataBar?.isp}}</p>
+  </div>
+</div>
