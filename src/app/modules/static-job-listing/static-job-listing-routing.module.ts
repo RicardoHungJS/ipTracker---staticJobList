@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { StaticJobListingComponent } from './static-job-listing.component';
 
 const routes: Routes = [
-  { path: 'static-jobs-list', component: StaticJobListingComponent },
+  { path: '', component: StaticJobListingComponent },
 ];
 
 @NgModule({
