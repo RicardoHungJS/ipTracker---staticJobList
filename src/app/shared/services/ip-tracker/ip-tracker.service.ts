@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { IPTrackingData, ipAddress } from '../../models/ipTrackerModels';
-import { environment } from 'src/enviroments/environment.prod';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +11,6 @@ export class IpTrackerService {
 
   private apiUrl = 'https://geo.ipify.org/api/v2/country,city';
   private ipAddressUrl = 'https://api.ipify.org?format=json';
-  private apiKey = environment.ipify_key;
 
   getIpAddress(): Observable<ipAddress> {
     const ipObject = this.http.get<ipAddress>(this.ipAddressUrl);
@@ -28,13 +26,15 @@ export class IpTrackerService {
 
     const apiKey = 'at_jJujWXqAOtcCLPdTLX6LGN8tKLykX';
 
+    let url = '';
+
     switch (inputType) {
       case 'ipAdress':
-        url = `${this.apiUrl}?apiKey=${this.apiKey}&ipAddress=${searchParameter}`;
+        url = `${this.apiUrl}?apiKey=${apiKey}&ipAddress=${searchParameter}`;
         break;
 
       case 'url':
-        url = `${this.apiUrl}?apiKey=${this.apiKey}&domain=${searchParameter}`;
+        url = `${this.apiUrl}?apiKey=${apiKey}&domain=${searchParameter}`;
         break;
 
       default:
