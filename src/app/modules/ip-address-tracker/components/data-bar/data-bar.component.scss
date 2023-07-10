@@ -64,6 +64,32 @@
 
   }
 
+  @media screen and (max-width: 241px) {
+    & {
+      width: 90%;
+      left: 3%;
+
+      .data-bar__section {
+        padding: 5px 0;
+        text-align: center;
+
+        &:not(:last-child)::after {
+          display: none;
+        }
+
+        .data-bar__section-title {
+          font-size: 0.6rem !important;
+          margin: 0 !important;
+        }
+
+        .data-bar__data {
+          font-size: 1.2rem !important;
+        }
+      }
+    }
+
+  }
+
   .data-bar__section {
     flex: 1;
     height: 100%;
