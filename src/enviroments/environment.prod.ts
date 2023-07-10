@@ -1,4 +1,6 @@
+const env = require('../../env.js')
+
 export const environment = {
   production: true,
-  ipify_key: process.env['ipify_key'],
+  ipify_key: env.ipify_key,
 };
