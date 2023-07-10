@@ -8,12 +8,13 @@ import { JobModel } from 'src/app/shared/models/jobModel';
 })
 export class StaticJobListingComponent implements OnInit {
   dataReceved: JobModel[] = [];
+  activeTags: Array<string> = [];
 
   constructor(private jobService: JobListService) {}
+
   ngOnInit(): void {
     this.initJobsData();
     console.log(this.dataReceved);
-
   }
 
   initJobsData() {

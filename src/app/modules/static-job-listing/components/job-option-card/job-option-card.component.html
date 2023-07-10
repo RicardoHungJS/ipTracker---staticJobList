@@ -1,19 +1,21 @@
 <div class="job-option-card">
-  <div class="job-option-card__left-green-line"></div>
+  <div class="job-option-card__left-green-line" [ngClass]="jobsData.featured ? 'green' : 'transparent'"></div>
   <img class="job-option-card__image-circle"
-    src="https://a.storyblok.com/f/160385/4bf112f0cd/datos_curiosos.jpg/m/?w=256&q=100" alt="job image">
+    [src]="jobsData.logo" alt="job image">
   <div class="job-option-card__job-data-box">
     <div class="job-option-card__status-box">
-      <span class="job-option-card__company-name">company x</span>
-      <div class="job-option-card__new-status-box">NEW!</div>
-      <div class="job-option-card__featured-status-box">FEATURED</div>
+      <span class="job-option-card__company-name">{{jobsData.company}}</span>
+      <div *ngIf="jobsData.new" class="job-option-card__new-status-box">NEW!</div>
+      <div *ngIf="jobsData.featured" class="job-option-card__featured-status-box">FEATURED</div>
     </div>
     <p class="job-option-card__job-name">Senior Front-end developer</p>
     <div class="job-option-card__tiny-info-box">
-      <p class="job-option-card__tiny-gray-info">texto 1</p>
-      <p class="job-option-card__tiny-gray-info">Contrato</p>
-      <p class="job-option-card__tiny-gray-info">pa todo lado</p>
+      <p class="job-option-card__tiny-gray-info">{{jobsData.postedAt}}</p>
+      <p class="job-option-card__tiny-gray-info">{{jobsData.contract}}</p>
+      <p class="job-option-card__tiny-gray-info">{{jobsData.location}}</p>
     </div>
   </div>
-  <div class="job-option-card__tags-box"></div>
+  <div class="job-option-card__tags-box">
+    <div *ngFor="let tag of tagsArray" class="job-option-card__tag" (click)="addTagToSearch($event)">{{tag}}</div>
+  </div>
 </div>

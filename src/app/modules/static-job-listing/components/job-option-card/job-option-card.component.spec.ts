@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JobOptionCardComponent } from './job-option-card.component';
+import JobOptionCardComponent from './job-option-card.component';
 
 describe('JobOptionCardComponent', () => {
   let component: JobOptionCardComponent;

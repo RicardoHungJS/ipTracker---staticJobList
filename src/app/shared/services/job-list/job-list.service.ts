@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import * as data from '../jobs-data.json';
@@ -9,7 +8,7 @@ import * as data from '../jobs-data.json';
 export class JobListService {
   jobsData = data;
 
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
   JobsData(): Observable<any> {
     return of<any>(this.jobsData);

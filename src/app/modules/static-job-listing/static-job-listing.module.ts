@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { StaticJobListingRoutingModule } from './static-job-listing-routing.module';
 import { StaticJobListingComponent } from './static-job-listing.component';
 import { SearcherComponent } from './components/searcher/searcher.component';
-import { JobOptionCardComponent } from './components/job-option-card/job-option-card.component';
+import JobOptionCardComponent from './components/job-option-card/job-option-card.component';
 
 
 @NgModule({

@@ -13,14 +13,14 @@
   }
 
   .static-job-container__jobs-options-box {
-    width: 100vw;
+    width: 100%;
     min-height: 70%;
     height: fit-content;
-    padding: 5rem 0;
+    padding: 4.4rem;
     background-color: #effafa;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 2rem;
   }
