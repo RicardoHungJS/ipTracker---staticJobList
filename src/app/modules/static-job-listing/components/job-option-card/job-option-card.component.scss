@@ -14,7 +14,7 @@
   /* -------------------------------------------------------------------------- */
 
   .job-option-card__left-green-line {
-    width: 5px;
+    min-width: 5px;
     height: 100%;
   }
 
@@ -33,7 +33,7 @@
   .job-option-card__image-circle {
     height: 70%;
     aspect-ratio: 1/1;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     object-fit: cover;
     display: flex;
     justify-content: center;
@@ -46,7 +46,7 @@
   /* -------------------------------------------------------------------------- */
 
   .job-option-card__job-data-box {
-    width: 300px;
+    width: 250px;
     height: 100%;
     padding: 1rem 0;
     display: flex;
@@ -67,19 +67,19 @@
         color: #5ba4a4;
         text-align: center;
         font-weight: 600;
-        font-size: 0.9rem;
+        font-size: 0.7rem;
       }
 
       @mixin statusBox ($color: black) {
-        height: 24px;
+        height: 20px;
         width: fit-content;
         background-color: $color;
         color: #fff;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 0.7rem;
-        padding: 0.5rem;
+        font-size: 0.6rem;
+        padding: 0.4rem;
         border-radius: 12px;
         font-weight: 600;
         letter-spacing: 1px;
@@ -100,6 +100,7 @@
       display: flex;
       align-items: center;
       font-weight: 600;
+      font-size: 0.9rem;
       color: #2c3a3a;
       transition: all 0.3s ease;
       cursor: pointer;
@@ -117,7 +118,7 @@
 
       .job-option-card__tiny-gray-info {
         height: 100%;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         color: #7e7e7e;
         margin: 0;
         display: flex;
@@ -144,22 +145,22 @@
     flex: 1;
     height: 100%;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
     justify-content: flex-end;
-    padding: 0 2rem;
+    padding: 0 1rem 0 0;
     gap: 1rem;
 
     .job-option-card__tag {
       width: fit-content;
       height: 2rem;
-      background-color: #e4e4e4;
       border-radius: 4px;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 0 0.7rem;
       font-weight: 600;
-      color: #5ba4a4;
+      font-size: 0.7rem;
       transition: all 0.3s ease;
       cursor: pointer;
 
@@ -167,6 +168,16 @@
         background-color: #5ba4a4;
         color: #fff;
       }
+    }
+
+    .active {
+      background-color: #5ba4a4;
+      color: #fff;
+    }
+
+    .notActive {
+      background-color: #e4e4e4;
+      color: #5ba4a4;
     }
   }
 }

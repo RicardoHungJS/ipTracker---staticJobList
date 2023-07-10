@@ -1,4 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output
+} from '@angular/core';
 import { JobModel } from 'src/app/shared/models/jobModel';
 
 @Component({
@@ -6,15 +12,15 @@ import { JobModel } from 'src/app/shared/models/jobModel';
   templateUrl: './job-option-card.component.html',
   styleUrls: ['./job-option-card.component.scss'],
 })
-export default class JobOptionCardComponent implements OnInit {
+export class JobOptionCardComponent implements OnInit {
   @Input() jobsData!: JobModel;
-  @Input() activeTags: Array<string> = [];
+  @Input() activeTags!: Array<string>;
+  @Output() agregarTagFilter = new EventEmitter();
 
   tagsArray?: Array<string> = [];
 
   ngOnInit(): void {
     if (this.jobsData) {
-      console.log(this.jobsData);
       this.integrateTagsIntoArray();
     }
   }
@@ -28,6 +34,6 @@ export default class JobOptionCardComponent implements OnInit {
   addTagToSearch(e: MouseEvent) {
     const elemento = e.target as HTMLElement;
     const texto = elemento.textContent;
-    console.log(texto);
+    this.agregarTagFilter.emit(texto);
   }
 }

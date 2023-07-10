@@ -14,7 +14,12 @@ export class StaticJobListingComponent implements OnInit {
 
   ngOnInit(): void {
     this.initJobsData();
-    console.log(this.dataReceved);
+  }
+
+  addSearchTag(e: any) {
+    if (!this.activeTags.includes(e)) {
+      this.activeTags = [...this.activeTags, e];
+    }
   }
 
   initJobsData() {
