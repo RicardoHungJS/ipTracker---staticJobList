@@ -21,6 +21,7 @@ export class IpTrackerService {
     searchParameter: string,
     inputType: string
   ): Observable<IPTrackingData> {
+
     /* Se entiende que para las apiKey y otros datos delicados se deben utilizar las variables de entorno del hosting y guardadas en un archivo 'enviroment' y 'env'
     para ser consumidas en toda la aplicación sin embargo para efectos prácticos se dejará la apiKey de ipify guardada en una constante de este servicio. */
 
