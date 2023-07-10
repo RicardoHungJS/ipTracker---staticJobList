@@ -12,7 +12,7 @@ export class IpTrackerService {
 
   private apiUrl = 'https://geo.ipify.org/api/v2/country,city';
   private ipAddressUrl = 'https://api.ipify.org?format=json';
-  private apiKey = environment.apiKey;
+  private apiKey = environment.ipify_key;
 
   getIpAddress(): Observable<ipAddress> {
     const ipObject = this.http.get<ipAddress>(this.ipAddressUrl);
