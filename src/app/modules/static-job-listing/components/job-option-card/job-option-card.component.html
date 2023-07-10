@@ -16,6 +16,6 @@
     </div>
   </div>
   <div class="job-option-card__tags-box">
-    <div *ngFor="let tag of tagsArray" class="job-option-card__tag" [ngClass]="activeTags.includes(tag) ? 'active' : 'notActive'" (click)="addTagToSearch($event)">{{tag}}</div>
+    <div *ngFor="let tag of tagsArray" class="job-option-card__tag" [ngClass]="activeTags.includes(tag.toLowerCase()) ? 'active' : 'notActive'" (click)="addTagToSearch($event)">{{tag}}</div>
   </div>
 </div>

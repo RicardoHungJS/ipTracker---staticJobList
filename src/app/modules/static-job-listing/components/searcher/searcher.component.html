@@ -2,7 +2,7 @@
   <div class="searcher__selected-box">
     <div *ngFor="let tagSearch of this.activeTags" class="searcher__tag-card">
       <div class="searcher__tag-text">{{tagSearch}}</div>
-      <button class="searcher__tag-delete">X</button>
+      <button class="searcher__tag-delete" (click)="deleteSearchTag(tagSearch)"><img src="../../../../../assets/vsg/icon-remove.svg"></button>
     </div>
   </div>
   <button class="searcher__clear-button" (click)="clearSearcher()">Clear</button>

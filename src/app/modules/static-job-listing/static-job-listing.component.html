@@ -1,7 +1,11 @@
 <div class="static-job-container">
   <header class="static-job-container__header"></header>
-  <app-searcher [activeTags]="activeTags"></app-searcher>
-  <div class="static-job-container__jobs-options-box">
+  <app-searcher
+    [activeTags]="activeTags"
+    (clearTagFilter)="deleteSearchTag($event)"
+    (clearAllFilter)="deleteAllSearchData()"
+  ></app-searcher>
+  <div *ngIf="dataFiltered.length === 0; else dataElse" class="static-job-container__jobs-options-box">
     <app-job-option-card
       *ngFor="let item of dataReceved"
       [jobsData]="item"
@@ -9,4 +13,14 @@
       (agregarTagFilter)="addSearchTag($event)"
     ></app-job-option-card>
   </div>
+  <ng-template #dataElse>
+    <div class="static-job-container__jobs-options-box">
+      <app-job-option-card
+        *ngFor="let item of dataFiltered"
+        [jobsData]="item"
+        [activeTags]="activeTags"
+        (agregarTagFilter)="addSearchTag($event)"
+      ></app-job-option-card>
+    </div>
+  </ng-template>
 </div>
