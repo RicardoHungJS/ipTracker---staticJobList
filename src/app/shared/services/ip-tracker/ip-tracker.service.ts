@@ -24,7 +24,7 @@ export class IpTrackerService {
     /* Se entiende que para las apiKey y otros datos delicados se deben utilizar las variables de entorno del hosting y guardadas en un archivo 'enviroment' y 'env'
     para ser consumidas en toda la aplicación sin embargo para efectos prácticos se dejará la apiKey de ipify guardada en una constante de este servicio. */
 
-    const apiKey = 'at_jJujWXqAOtcCLPdTLX6LGN8tKLykX';
+    const apiKey = import.meta.env.NG_APP_IPIFY_KEY;
 
     let url = '';
 
